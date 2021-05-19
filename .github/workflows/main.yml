@@ -33,13 +33,13 @@ jobs:
           cd grpc-go/cmd/protoc-gen-go-grpc
           go install .
 
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
       - name: Install protoc-gen-java-grpc
         uses: wei/curl@master
         with:
           args: https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output $GITHUB_WORKSPACE/bin/protoc-gen-java-grpc
-
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
 
       - name: Install grpc-js and grpc-web tools
         run: yarn --check-files
