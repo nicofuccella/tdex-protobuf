@@ -39,7 +39,7 @@ jobs:
       - name: add path
         run: |
           mkdir -p $GITHUB_WORKSPACE/bin
-          echo "::add-path::$GITHUB_WORKSPACE/bin"
+          echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
 
       - name: Install protoc-gen-java-grpc
         uses: wei/curl@master
