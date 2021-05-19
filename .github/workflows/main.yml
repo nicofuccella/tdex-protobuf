@@ -36,7 +36,7 @@ jobs:
       - name: Install protoc-gen-java-grpc
         uses: wei/curl@master
         with:
-          args: https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output /usr/local/bin/protoc-gen-java-grpc
+          args: https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output $GITHUB_WORKSPACE/bin/protoc-gen-java-grpc
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
