@@ -37,7 +37,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create bin path
-        run: mkdir -p $GITHUB_WORKSPACE/bin
+        run: |
+          mkdir -p $GITHUB_WORKSPACE/bin
+          echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
 
       - name: Install protoc-gen-java-grpc
         uses: wei/curl@master
