@@ -38,6 +38,7 @@ jobs:
 
       - name: Create bin path
         run: |
+          echo "$PATH"
           mkdir -p $GITHUB_WORKSPACE/bin
           echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
 
