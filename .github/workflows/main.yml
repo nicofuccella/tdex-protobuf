@@ -47,7 +47,7 @@ jobs:
           args: https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output $GITHUB_WORKSPACE/bin/protoc-gen-java-grpc
 
       - name: make protoc-gen-java-grpc executable
-        run: chmod +x $GITHUB_WORKSPACE/bin/protoc-gen-java-grpc
+        run: echo $GITHUB_PATH
 
       - name: Install grpc-js and grpc-web tools
         run: yarn --check-files
