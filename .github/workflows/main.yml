@@ -36,6 +36,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Create bin path
+        run: mkdir -p $GITHUB_WORKSPACE/bin
+
       - name: Install protoc-gen-java-grpc
         uses: wei/curl@master
         with:
