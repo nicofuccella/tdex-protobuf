@@ -47,7 +47,6 @@ jobs:
           wget -O ${HOME}/.local/bin/protoc-gen-java-grpc https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-x86_32.exe
           chmod +x ${HOME}/.local/bin/protoc-gen-java-grpc
           echo "${HOME}/.local/bin" >> $GITHUB_PATH
-          make java
 
       - name: Install grpc-js and grpc-web tools
         run: yarn --check-files
