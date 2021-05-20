@@ -44,7 +44,7 @@ jobs:
       - name: Install protoc-gen-java-grpc
         run: |
           mkdir -p ${HOME}/.local/bin
-          wget -O ${HOME}/.local/bin/protoc-gen-java-grpc https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe
+          wget -O ${HOME}/.local/bin/protoc-gen-java-grpc https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe
           chmod +x ${HOME}/.local/bin/protoc-gen-java-grpc
           echo "${HOME}/.local/bin" >> $GITHUB_PATH
           make java
