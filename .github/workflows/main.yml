@@ -47,6 +47,9 @@ jobs:
           args: https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output $GITHUB_WORKSPACE/protoc-gen-java-grpc
 
       - name: Install grpc-js and grpc-web tools
+        run: ls -la
+
+      - name: Install grpc-js and grpc-web tools
         run: yarn --check-files
 
       - name: Compile Go stubs
