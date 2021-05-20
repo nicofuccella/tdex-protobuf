@@ -43,10 +43,11 @@ jobs:
 
       - name: Install protoc-gen-java-grpc
         run: |
-          mkdir -p .local/bin
-          curl https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output .local/bin/protoc-gen-java-grpc
-          chmod +x .local/bin/protoc-gen-java-grpc
+          mkdir -p ${HOME}/.local/bin
+          curl https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output ${HOME}/.local/bin/protoc-gen-java-grpc
+          chmod +x ${HOME}/.local/bin/protoc-gen-java-grpc
           echo "${HOME}/.local/bin" >> $GITHUB_PATH
+          make java
 
       - name: Install grpc-js and grpc-web tools
         run: yarn --check-files
