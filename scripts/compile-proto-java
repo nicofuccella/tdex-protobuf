@@ -19,7 +19,6 @@ mkdir -p ./generated/java-lite
 protoc \
   --java-grpc_out=lite:./generated/java-lite \
   --java_out=lite:./generated/java-lite \
-  --plugin=protoc-gen-java-grpc=./protoc-gen-java-grpc \
   *.proto
 
 popd
