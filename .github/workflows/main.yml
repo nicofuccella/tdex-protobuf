@@ -42,12 +42,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install protoc-gen-java-grpc
-        uses: wei/curl@master
-        with:
-          args: https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output $GITHUB_WORKSPACE/protoc-gen-java-grpc
-
-      - name: Install grpc-js and grpc-web tools
-        run: ls -la
+        run: |
+          curl https://search.maven.org/remotecontent?filepath=io/grpc/protoc-gen-grpc-java/1.38.0/protoc-gen-grpc-java-1.38.0-linux-aarch_64.exe --output $GITHUB_WORKSPACE/protoc-gen-java-grpc
+          chmod +x $GITHUB_WORKSPACE/protoc-gen-java-grpc
 
       - name: Install grpc-js and grpc-web tools
         run: yarn --check-files
